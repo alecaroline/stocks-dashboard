@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css"/>
-    <title>Stock Dashboard</title>
-</head>
-<body>
-    <header id="main-header">
-        <div class="wrapper">
-            <img src="img/img-stock-logo.svg" alt="Logo Stock Dashboard">
-            <h1>Stock <span>Dashboard</span></h1>
-            <button>+</button>
-        </div>
-    </header>
-    <div class="modal">
-        <div class="modal-content">
-            <h2>Add Stock</h2>
-        </div>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Stocks Dashboard</title>
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="wrapper">
+                <img src="img/icon-stock-logo.svg" alt="Logo Stock Dashboard">
+                <h1>Stocks <span>Dashboard</span></h1>
+                <button onclick="openModal('#add-stock')">+</button>
+            </div>
+        </header>
+        <div class="modal" id="add-stock">
+            <div class="modal-content">
+                <h1>Add Stock</h1>
+                <button class="btn-close" onclick="closeModal('#add-stock')
+                ">x</button>
+                <form onsubmit="handleAddTicker(event)">
+                    <label for="ticker">Ticker:</label>
+                    <input type="text" name="ticker" id="ticker" />
+                    <input type="submit" value="Add Ticker" />
+                </form>
+            </div>
+        <div>
+        <script src="js/main.js"></script>
+    </body>
 </html>
